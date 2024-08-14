@@ -2,27 +2,28 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: #282c33;
-  padding: 50px 0;
+  padding: 50px;
 `;
 
 export const BoxSwitch = styled.div`
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Switch = styled.div<{ enabled: boolean }>`
   background: white;
-  width: 200px;
+  width: 100px;
   height: 40px;
   border-radius: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
 `;
 
 export const SwitchSpan = styled.span<{ enabled: boolean }>`
- width: 30px;
-height: 30px;
+  width: 15px;
+  height: 15px;
 `
 

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Wrapper, BoxSwitch, Switch, SwitchSpan } from "./style";
+import Image from "next/image";
+
 
 export default function Swicht() {
   const [swichtSelector, setSwichtSelector] = useState<boolean>(true);
@@ -12,75 +14,23 @@ export default function Swicht() {
       <BoxSwitch>
         <Switch enabled={swichtSelector} onClick={controlSwitch}>
           {swichtSelector ? (
-            <div>
+            <>
               <SwitchSpan enabled={swichtSelector}>
-                <svg
-                  width="100"
-                  height="100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="15"
-                    stroke="green"
-                    stroke-width="4"
-                    fill="yellow"
-                  />
-                </svg>
+                <Image src="/img/switch.png" width={20} height={20} alt="Picture of the author"/>
               </SwitchSpan>
               <SwitchSpan enabled={swichtSelector}>
-                <svg
-                  width="100"
-                  height="100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="15"
-                    stroke="green"
-                    stroke-width="4"
-                    fill="red"
-                  />
-                </svg>
+                <Image src="/img/withe.png" width={20} height={20} alt="Picture of the author"/>
               </SwitchSpan>
-            </div>
+            </>
           ) : (
-            <div>
+            <>
               <SwitchSpan enabled={swichtSelector}>
-                <svg
-                  width="100"
-                  height="100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="15"
-                    stroke="green"
-                    stroke-width="4"
-                    fill="red"
-                  />
-                </svg>
+                <Image src="/img/withe.png" width={20} height={20} alt="Picture of the author"/>
               </SwitchSpan>
               <SwitchSpan enabled={swichtSelector}>
-                <svg
-                  width="100"
-                  height="100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="15"
-                    stroke="green"
-                    stroke-width="4"
-                    fill="yellow"
-                  />
-                </svg>
+                <Image src="/img/switch.png" width={20} height={20} alt="Picture of the author"/>
               </SwitchSpan>
-            </div>
+            </>
           )}
         </Switch>
       </BoxSwitch>{" "}
